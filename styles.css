@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
+ 
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color1: #2c3639;
+  --color2: #3f4e4f;
+  --color3: #a27b5c;
+  --color4: #dcd7c9;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--color4);
+  z-index: 10;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+li a {
+  display: flex;
+  color: var(--color1);
+  text-align: center;
+  justify-content: space-around;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: var(--color1);
+  color: var(--color4);
+}
+
+.active {
+  background-color: #4caf50;
+}
+
+#welcome-section {
+  background-color: var(--color1);
+  color: var(--color4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+#project {
+  text-align: center;
+  background-color: var(--color4);
+}
+
+.project-title {
+  padding: 2rem;
+  color: var(--color1);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color1);
+}
+
+.project-image {
+  height: calc(100% - 6.8rem);
+  width: 100%;
+  object-fit: cover;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 30vh;
+  color: var(--color4);
+  background-color: var(--color1);
+}
+
+.contact-link {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.contact-link a {
+  color: var(--color4);
+}
+
+footer {
+  font-weight: 300;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+    background: var(--color4);
+    border-top: 4px solid var(--color3);
+}
+
+@media (max-width: 375px) {
+  #contact {
+    height: 35vh;
+  }
+  .contact-link {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+}
